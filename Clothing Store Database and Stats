@@ -1,0 +1,27 @@
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, quantity INTEGER,  department TEXT);
+
+INSERT INTO clothing VALUES (1, "shirt", 10,40,"Casual");
+INSERT INTO clothing VALUES (2, "socks", 7,20,"Footwear");
+INSERT INTO clothing VALUES (3, "tanks", 5,15, "Casual");
+INSERT INTO clothing VALUES (4, "sandals", 30,25, "Footwear");
+INSERT INTO clothing VALUES (5, "leggings", 40,30,"Athletic");
+INSERT INTO clothing VALUES (6, "tech tee", 20,18, "Outerwear");
+INSERT INTO clothing VALUES (7, "sports bra", 25,20, "Athletic");
+INSERT INTO clothing VALUES (8, "cleats", 70, 10, "Footwear");
+INSERT INTO clothing VALUES (9, "beanie", 10, 15, "Outerwear"); 
+INSERT INTO clothing VALUES (10, "joggers", 35,16, "Athletic");
+INSERT INTO clothing VALUES (11, "hoodie", 60, 10, "Casual");
+INSERT INTO clothing VALUES (12, "slides", 20,14, "Footwear");
+INSERT INTO clothing VALUES (13, "quarter zip", 25, 12, "Athletic");
+INSERT INTO clothing VALUES (14, "polo", 40, 30, "Casual");
+INSERT INTO clothing VALUES (15, "glove", 15,8, "Outerwear");
+
+
+
+-- display the database ordered by price
+SELECT * FROM clothing
+ORDER BY price
+
+-- Order the departments by the sum of highest price 
+SELECT * FROM clothing ORDER BY price;
+SELECT department, SUM (price) FROM clothing GROUP BY department;
